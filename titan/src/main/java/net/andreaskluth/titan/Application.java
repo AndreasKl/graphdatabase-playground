@@ -28,7 +28,7 @@ public class Application {
     TitanFactory.Builder config = createConfiguration();
     TitanGraph graph = config.open();
 
-    if (!isDatabaseAvailible()) {
+    if (!isDatabaseAvailable()) {
       createDatabaseIfNotPresent(graph);
       createSampleData(graph);
     }
@@ -57,7 +57,7 @@ public class Application {
     }
   }
 
-  private static boolean isDatabaseAvailible() {
+  private static boolean isDatabaseAvailable() {
     return new File(DIRECTORY).exists();
   }
 
